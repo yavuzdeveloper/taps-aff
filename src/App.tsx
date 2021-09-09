@@ -30,7 +30,7 @@ function App() {
             {wear && (
               <img
                 src="https://www.taps-aff.co.uk/static/img/clothing/tapsaff.svg"
-                alt="clothes"
+                alt="person"
                 style={{
                   height: "40px",
                   width: "40px",
@@ -119,23 +119,25 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>taps aff-oan</h1>
+        <h1>taps aff/oan</h1>
       </header>
       <h1>Scotland</h1>
-      <div
-        className="wheatherImage"
-        onClick={() => setWear(!wear)}
-        style={{
-          cursor: "pointer",
-          backgroundImage: `url("https://media.istockphoto.com/vectors/scotland-outline-map-on-beige-grid-retro-background-vector-id546200576")`,
-          height: "1000px",
-          width: "900px",
-          display: "flex",
-          margin: "auto",
-        }}
-      >
-        {weatherView()}
-      </div>
+      <button onClick={() => setWear(!wear)}>
+        taps aff oan
+        <div
+          className="wheatherImage"
+          style={{
+            cursor: "pointer",
+            backgroundImage: `url("https://media.istockphoto.com/vectors/scotland-outline-map-on-beige-grid-retro-background-vector-id546200576")`,
+            height: "1000px",
+            width: "900px",
+            display: "flex",
+            margin: "auto",
+          }}
+        >
+          {weatherView()}
+        </div>
+      </button>
     </div>
   );
 }
